@@ -1,6 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Slider from "react-slick";
+import React, {useState, useEffect} from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Autoplay, Navigation} from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import '../index.css'
+
+import axios from "axios";
 
 const Banner: React.FC = () => {
     const [banners, setBanners] = useState<string[]>([]);
@@ -18,22 +25,57 @@ const Banner: React.FC = () => {
             });
     }, []);
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-
     return (
-        <Slider {...settings}>
-            {banners.map((banner, index) => (
-                <div key={index}>
-                    <img src={banner} alt={`Banner ${index + 1}`} />
-                </div>
-            ))}
-        </Slider>
+        <>
+            <Swiper
+                className="mySwiper"
+                spaceBetween={30}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                scrollbar={{draggable: true}}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40
+                    },
+                    1440: {
+                        slidesPerView: 5,
+                        spaceBetween: 50
+                    }
+                }}
+            >
+                <SwiperSlide>Slide 1</SwiperSlide>
+                <SwiperSlide>Slide 2</SwiperSlide>
+                <SwiperSlide>Slide 3</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                {/*{banners.map((banner, index) => (*/}
+                {/*    <SwiperSlide key={index}>*/}
+                {/*        <img src={banner} alt={`Banner ${index + 1}`} />*/}
+                {/*    </SwiperSlide>*/}
+                {/*))}*/}
+            </Swiper>
+        </>
     );
 }
 

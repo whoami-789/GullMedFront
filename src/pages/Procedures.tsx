@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Results: React.FC = () => {
+const Procedures: React.FC = () => {
     return (
         <div>
             <Header/>
@@ -12,4 +12,4 @@ const Results: React.FC = () => {
     );
 }
 
-export default Results;
+export default Procedures;

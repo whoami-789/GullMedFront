@@ -9,6 +9,7 @@ import Results from "./pages/Results";
 import AdminDashboard from "./pages/staff/AdminDashboard";
 import DoctorDashboard from "./pages/staff/DoctorDashboard";
 import RootDashboard from "./pages/staff/RootDashboard";
+import Procedures from "./pages/Procedures";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
+            <Route path="/procedure" element={<Procedures/>} />
             <Route path="/results" element={<Results/>} />
             <Route path="/admin" element={<AdminDashboard/>} />
             <Route path="/doctor" element={<DoctorDashboard/>} />
