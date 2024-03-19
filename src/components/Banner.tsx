@@ -30,35 +30,34 @@ const Banner: React.FC = () => {
             <Swiper
                 className="mySwiper"
                 spaceBetween={30}
-                slidesPerView={1}
+                centeredSlides={true}
                 loop={true}
                 autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
+                  delay: 2500,
+                  disableOnInteraction: false,
                 }}
-                scrollbar={{draggable: true}}
                 navigation={true}
                 modules={[Autoplay, Navigation]}
                 breakpoints={{
                     640: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 20
                     },
                     768: {
-                        slidesPerView: 3,
+                        slidesPerView: 1,
                         spaceBetween: 30
                     },
                     1024: {
-                        slidesPerView: 4,
+                        slidesPerView: 1,
                         spaceBetween: 40
                     },
                     1440: {
-                        slidesPerView: 5,
+                        slidesPerView: 1,
                         spaceBetween: 50
                     }
                 }}
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
+                <SwiperSlide><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/4-uniform_77.svg/815px-4-uniform_77.svg.png'></img></SwiperSlide>
                 <SwiperSlide>Slide 2</SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>

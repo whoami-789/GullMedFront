@@ -8,7 +8,7 @@ const Home: React.FC = () => {
         <div>
             <Header/>
             <div className="flex justify-center items-center flex-col">
-                <div className='mt-2 w-2/4 h-3/4 mb-4'>
+                <div className='mt-2 w-2/4 h-2/4 mb-4'>
                     <Banner/>
                 </div>
                 <div>
