@@ -70,7 +70,8 @@ const Header: React.FC = () => {
                     </ul>
                 </nav>
 
-                <div className="md:hidden">
+                <div className="flex md:hidden">
+                    <LanguageSwitcherButton/>
                     <button onClick={toggleMenu} className="text-white mr-5">
                         <FaBars/>
                     </button>

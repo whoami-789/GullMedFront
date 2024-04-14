@@ -5,7 +5,7 @@ import {GlobalOutlined, ZhihuOutlined} from '@ant-design/icons';
 const LanguageSwitcherButton: React.FC = () => {
     const menu = (
         <Menu>
-            <Menu.Item key="1">English</Menu.Item>
+            <Menu.Item key="1">O'zbek</Menu.Item>
             <Menu.Item key="2">Русский</Menu.Item>
             {/* Добавьте другие языки, если необходимо */}
         </Menu>
