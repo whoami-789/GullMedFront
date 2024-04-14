@@ -53,9 +53,9 @@ const Header: React.FC = () => {
                         <li className="flex items-center">
                             <LanguageSwitcherButton/>
                             <div className='block mr-4 text-center'>
-                                <span className="text-gray-300">Круглосуточно</span>
+                                <span className="text-white">Круглосуточно</span>
                                 <p/>
-                                <span className="text-gray-300">+998956007117</span>
+                                <span className="text-white">+998956007117</span>
                             </div>
                             {isLoggedIn ? (
                                 <NavLink to="/results" className="ml-7 flex items-center">
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                             )}
                         </li>
 
-                        <a href="tel:+998956007117" className="text-gray-300">+998956007117</a>
+                        <a href="tel:+998956007117" className="text-white">+998956007117</a>
 
                     </ul>
                 </nav>

@@ -39,8 +39,8 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                     <div className="flex flex-col lg:flex-row items-start lg:items-center">
-                        <div className="w-full lg:w-1/2 lg:mr-80 flex-grow">
-                            <div className="bg-blue-600 text-white rounded-lg py-4 px-6 max-[479px]:m-1">
+                        <div className="w-full lg:mr-40 flex-grow">
+                            <div className="bg-blue-600 text-white rounded-lg py-4 px-7 max-[479px]:m-1">
                                 <h2 className="text-lg font-bold mb-2">Наши медицинские услуги</h2>
                                 <p className="text-sm">Мы предлагаем широкий спектр
                                     медицинских услуг, чтобы удовлетворить потребности наших пациентов. Наша команда
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                     <div className='mt-10 mb-4'>
                         <h3 className='text-2xl font-bold text-blue-600 text-center mb-3'>Можете найти нас тут и сразу
                             вызвать такси</h3>
-                        <iframe className='map' src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=136843806339"
+                        <iframe className='map rounded-lg' src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=136843806339"
                                 height="400"></iframe>
                     </div>
                 </div>
