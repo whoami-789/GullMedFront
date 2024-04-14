@@ -3,12 +3,15 @@ import {NavLink} from 'react-router-dom';
 import {FaBars, FaUser} from "react-icons/fa";
 import logo from '../logo.webp'
 import {UserOutlined} from '@ant-design/icons';
-import LanguageSwitcherButton from './LanguageSwitcherButton'; // Импорт компонента кнопки перевода
+import LanguageSwitcherButton from './LanguageSwitcherButton';
+import {useTranslation} from "react-i18next"; // Импорт компонента кнопки перевода
 
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { t } = useTranslation();
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -31,18 +34,16 @@ const Header: React.FC = () => {
                         <ul className="flex space-x-4">
                             <li>
                                 <NavLink to="/"
-                                         className={window.location.pathname === '/' ? 'text-gray-400' : ''}>Главная</NavLink>
+                                         className={window.location.pathname === '/' ? 'text-gray-400' : ''}>{t('header.main')}</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/procedure"
-                                         className={window.location.pathname === '/procedure' ? 'text-gray-400' : ''}>Процедуры
-                                    и обследования</NavLink>
+                                         className={window.location.pathname === '/procedure' ? 'text-gray-400' : ''}>{t('header.procedures')}</NavLink>
                             </li>
                             {isLoggedIn && (
                                 <li>
                                     <NavLink to="/results"
-                                             className={window.location.pathname === '/results' ? 'text-gray-400' : ''}>Результаты
-                                        обследований</NavLink>
+                                             className={window.location.pathname === '/results' ? 'text-gray-400' : ''}>{t('header.results')}</NavLink>
                                 </li>
                             )}
                         </ul>
@@ -53,17 +54,17 @@ const Header: React.FC = () => {
                         <li className="flex items-center">
                             <LanguageSwitcherButton/>
                             <div className='block mr-4 text-center'>
-                                <span className="text-white">Круглосуточно</span>
+                                <span className="text-white">{t('header.grafik')}</span>
                                 <p/>
                                 <span className="text-white">+998956007117</span>
                             </div>
                             {isLoggedIn ? (
                                 <NavLink to="/results" className="ml-7 flex items-center">
-                                    <UserOutlined/> <p className="ml-2">Личный кабинет</p>
+                                    <UserOutlined/> <p className="ml-2">{t('header.account')}</p>
                                 </NavLink>
                             ) : (
                                 <NavLink to="/login" className="ml-7 flex items-center">
-                                    Войти
+                                    {t('header.login')}
                                 </NavLink>
                             )}
                         </li>
@@ -82,28 +83,28 @@ const Header: React.FC = () => {
                     <ul className="flex flex-col space-y-4 text-white items-center text-center">
                         <li>
                             <NavLink to="/" className={window.location.pathname === '/' ? 'text-gray-400' : ''}
-                                     onClick={toggleMenu}>Главная</NavLink>
+                                     onClick={toggleMenu}>{t('header.main')}</NavLink>
                         </li>
                         <li>
                             <NavLink to="/procedure"
                                      className={window.location.pathname === '/procedure' ? 'text-gray-400 text-center' : ''}
-                                     onClick={toggleMenu}>Процедуры и обследования</NavLink>
+                                     onClick={toggleMenu}>{t('header.procedures')}</NavLink>
                         </li>
                         {isLoggedIn && (
                             <li>
                                 <NavLink to="/results"
                                          className={window.location.pathname === '/results' ? 'text-gray-400 text-center' : ''}
-                                         onClick={toggleMenu}>Результаты обследований</NavLink>
+                                         onClick={toggleMenu}>{t('header.results')}</NavLink>
                             </li>
                         )}
                         <li>
                             {isLoggedIn ? (
                                 <NavLink to="/results" className="flex items-center">
-                                    Личный кабинет
+                                    {t('header.account')}
                                 </NavLink>
                             ) : (
                                 <NavLink to="/login" className="flex items-center">
-                                    Войти
+                                    {t('header.login')}
                                 </NavLink>
                             )}
                         </li>
