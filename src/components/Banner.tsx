@@ -36,7 +36,7 @@ const Banner: React.FC = () => {
                   delay: 2500,
                   disableOnInteraction: false,
                 }}
-                navigation={true}
+                navigation={false}
                 modules={[Autoplay, Navigation]}
                 breakpoints={{
                     640: {
@@ -57,17 +57,10 @@ const Banner: React.FC = () => {
                     }
                 }}
             >
-                <SwiperSlide><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/4-uniform_77.svg/815px-4-uniform_77.svg.png'></img></SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide><img src='https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif'></img></SwiperSlide>
+                <SwiperSlide><img src='https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif'></img></SwiperSlide>
+                <SwiperSlide><img src='https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif'></img></SwiperSlide>
+
                 {/*{banners.map((banner, index) => (*/}
                 {/*    <SwiperSlide key={index}>*/}
                 {/*        <img src={banner} alt={`Banner ${index + 1}`} />*/}
