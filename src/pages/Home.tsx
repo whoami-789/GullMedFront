@@ -51,7 +51,8 @@ const Home: React.FC = () => {
                         </div>
                         <div className="w-full lg:w-1/2 mt-4 lg:mt-0 flex-grow">
                             <Button
-                                className="w-full lg:w-auto bg-blue-600 hover:bg-blue-600 text-white font-bold px-8 rounded-full max-[479px]: h-10">
+                                className="w-full lg:w-auto bg-blue-600 hover:bg-blue-600 text-white font-bold px-8 py-2 rounded-full max-[479px]: h-10"
+                            href="/procedure">
                                 Записаться на обследование
                             </Button>
                         </div>
