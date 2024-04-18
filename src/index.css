@@ -100,4 +100,6 @@
     }
 }
 
-
+.ant-picker-time-panel-column {
+    width: 300px; /* Установите нужную ширину */
+}

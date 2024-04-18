@@ -6,6 +6,13 @@ import { initReactI18next } from 'react-i18next';
 import translationUZ from './lang/uz.json';
 import translationRU from './lang/ru.json';
 
+// Функция для получения языка из localStorage
+const getLanguageFromStorage = () => {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    return storedLanguage || 'uz'; // Возвращаем сохраненный язык или 'uz' по умолчанию
+};
+
+
 // Настройка i18next
 i18n
     .use(initReactI18next) // Подключаем React
@@ -18,7 +25,7 @@ i18n
                 translation: translationRU,
             },
         },
-        lng: 'uz', // Устанавливаем начальный язык
+        lng: getLanguageFromStorage(), // Устанавливаем начальный язык
         fallbackLng: 'uz', // Устанавливаем язык по умолчанию
         interpolation: {
             escapeValue: false, // не экранировать специальные символы

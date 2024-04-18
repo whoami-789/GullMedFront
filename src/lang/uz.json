@@ -7,12 +7,21 @@
     "account": "Shaxsiy kabinet",
     "login": "Kirish"
   },
-  "h1": "Sizning sog'lig'ingiz bizning mutaxassislar guruhimiz tomonidan ishonchli himoyalangan Gull Med klinikasiga xush kelibsiz. Biz MRT, ultratovush va boshqa ko'plab protseduralarni o'z ichiga olgan eng zamonaviy diagnostika va davolash usullarini taklif etamiz. Katta tajribaga ega bo'lgan yuqori malakali shifokorlarimiz kun yoki tunning istalgan vaqtida sizga yordam berishga tayyor. Sog'lig'ingizni Gull Med-dagi mutaxassislarga topshiring, shunda siz qulay va do'stona muhitda yuqori darajadagi tibbiy xizmatlardan foydalanishingiz mumkin.",
-  "h2": {
-    "header": "Bizning tibbiy xizmatlarimiz",
-    "text": "Biz bemorlarimizning ehtiyojlarini qondirish uchun keng ko'lamli tibbiy xizmatlarni taklif etamiz. Bizning jamoamiz tibbiyotning turli sohalarida ixtisoslashgan yuqori malakali shifokorlardan iborat. Bizning maqsadimiz sizni sog'lom va yaxshi holatda saqlashga yordam berishdir. Ishonch bilan biz bilan bog'laning va biz sizni qulay va xavfsiz saqlash uchun qo'limizdan kelganini qilamiz.",
-    "button": "Imtihonga yozilish"
+  "Main": {
+    "h1": "Sizning sog'lig'ingiz bizning mutaxassislar guruhimiz tomonidan ishonchli himoyalangan Gull Med klinikasiga xush kelibsiz. Biz MRT, ultratovush va boshqa ko'plab protseduralarni o'z ichiga olgan eng zamonaviy diagnostika va davolash usullarini taklif etamiz. Katta tajribaga ega bo'lgan yuqori malakali shifokorlarimiz kun yoki tunning istalgan vaqtida sizga yordam berishga tayyor. Sog'lig'ingizni Gull Med-dagi mutaxassislarga topshiring, shunda siz qulay va do'stona muhitda yuqori darajadagi tibbiy xizmatlardan foydalanishingiz mumkin.",
+    "h2": {
+      "header": "Bizning tibbiy xizmatlarimiz",
+      "text": "Biz bemorlarimizning ehtiyojlarini qondirish uchun keng ko'lamli tibbiy xizmatlarni taklif etamiz. Bizning jamoamiz tibbiyotning turli sohalarida ixtisoslashgan yuqori malakali shifokorlardan iborat. Bizning maqsadimiz sizni sog'lom va yaxshi holatda saqlashga yordam berishdir. Ishonch bilan biz bilan bog'laning va biz sizni qulay va xavfsiz saqlash uchun qo'limizdan kelganini qilamiz.",
+      "button": "Imtihonga yozilish"
+    },
+    "h3": "Bizni bu erda topishingiz va darhol taksiga qo'ng'iroq qilishingiz mumkin"
   },
-  "h3": "Bizni bu erda topishingiz va darhol taksiga qo'ng'iroq qilishingiz mumkin",
+  "Procedures": {
+    "button": "Yozilish",
+    "cancel": "Bekor qilish",
+    "modal_title": "Sana va vaqtni tanlang",
+    "date": "Sanani tanlang",
+    "time": "Vaqtni tanlang"
+  },
   "footer": "© 2024 Gull Med. Barcha huquqlar himoyalangan."
 }

@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, Dropdown } from 'antd';
-import {ZhihuOutlined} from '@ant-design/icons';
-import i18n from '../i18n'; // Импортируем объект i18n для доступа к функции изменения языка
+import { GlobalOutlined } from '@ant-design/icons';
+import i18n from '../i18n'; // Подключаем наш модуль с i18n
 
 const LanguageSwitcherButton: React.FC = () => {
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng); // Изменяем текущий язык при выборе из меню
+    const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem('selectedLanguage') || 'uz'); // Получаем выбранный язык из localStorage или устанавливаем по умолчанию 'uz'
+
+    useEffect(() => {
+        console.log("Selected language:", selectedLanguage); // Выводим выбранный язык в консоль
+    }, [selectedLanguage]);
+
+    const changeLanguage = (language: string) => {
+        setSelectedLanguage(language); // Устанавливаем выбранный язык в state
+        localStorage.setItem('selectedLanguage', language); // Сохраняем выбранный язык в localStorage
+        i18n.changeLanguage(language); // Изменяем текущий язык в i18n
     };
 
     const menu = (
         <Menu>
-            <Menu.Item key="1" onClick={() => changeLanguage('uz')}>O'zbek</Menu.Item>
-            <Menu.Item key="2" onClick={() => changeLanguage('ru')}>Русский</Menu.Item>
+            <Menu.Item key="uz" onClick={() => changeLanguage('uz')}>O'zbek</Menu.Item>
+            <Menu.Item key="ru" onClick={() => changeLanguage('ru')}>Русский</Menu.Item>
             {/* Добавьте другие языки, если необходимо */}
         </Menu>
     );
@@ -19,7 +27,7 @@ const LanguageSwitcherButton: React.FC = () => {
     return (
         <div className="mr-8">
             <Dropdown overlay={menu} trigger={['click']}>
-                <ZhihuOutlined style={{ fontSize: '24px', color: '#ffffff' }} />
+                <GlobalOutlined style={{ fontSize: '24px', color: '#ffffff' }} />
             </Dropdown>
         </div>
     );

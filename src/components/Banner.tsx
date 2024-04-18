@@ -12,18 +12,18 @@ import axios from "axios";
 const Banner: React.FC = () => {
     const [banners, setBanners] = useState<string[]>([]);
 
-    useEffect(() => {
-        // Запрос к API для получения изображений баннера
-        axios.get('/api/banners')
-            .then(response => {
-                // Обработка успешного ответа
-                setBanners(response.data);
-            })
-            .catch(error => {
-                // Обработка ошибки
-                console.error('Failed to fetch banners:', error);
-            });
-    }, []);
+    // useEffect(() => {
+    //     // Запрос к API для получения изображений баннера
+    //     axios.get('/api/banners')
+    //         .then(response => {
+    //             // Обработка успешного ответа
+    //             setBanners(response.data);
+    //         })
+    //         .catch(error => {
+    //             // Обработка ошибки
+    //             console.error('Failed to fetch banners:', error);
+    //         });
+    // }, []);
 
     return (
         <>
