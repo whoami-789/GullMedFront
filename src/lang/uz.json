@@ -23,5 +23,16 @@
     "date": "Sanani tanlang",
     "time": "Vaqtni tanlang"
   },
+  "Results": {
+    "patientInfo": "Bemor",
+    "firstName": "Ism",
+    "lastName": "Familiya",
+    "birthDate": "Tug'ilgan kun",
+    "phoneNumber": "Telefon raqami",
+    "title": "Tugallangan protseduralar",
+    "date": "Sana",
+    "time": "Vaqt",
+    "open": "Batafsil..."
+  },
   "footer": "© 2024 Gull Med. Barcha huquqlar himoyalangan."
 }
