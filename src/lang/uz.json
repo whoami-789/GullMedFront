@@ -34,5 +34,38 @@
     "time": "Vaqt",
     "open": "Batafsil..."
   },
-  "footer": "© 2024 Gull Med. Barcha huquqlar himoyalangan."
+  "Login": {
+    "h1": "Kirish",
+    "name": "Ism",
+    "surname": "Familiya",
+    "pnumber": "Telefon raqami",
+    "bdate": "Tug'ilgan kun",
+    "password": "Parol",
+    "remember": "Meni eslab qolish",
+    "login": "Kirish uchun",
+    "register-tip": "Hali ro'yxatdan o'tmaganmisiz?",
+    "register": "Roʻyxatdan oʻtish"
+  },
+  "Register": {
+    "h1": "Roʻyxatdan oʻtish",
+    "name": "Ism",
+    "surname": "Familiya",
+    "pnumber": "Telefon raqami",
+    "bdate": "Tug'ilgan kun",
+    "password": "Parol",
+    "conf-password": "Parolni tasdiqlang",
+    "login-tip": "Allaqachon ro'yxatdan o'tganmisiz?",
+    "login": "Kirish",
+    "register": "Roʻyxatdan oʻtish"
+  },
+  "footer": "© 2024 Gull Med. Barcha huquqlar himoyalangan.",
+  "Error-messages": {
+    "name": "Iltimos, ismingizni kiriting!",
+    "surname": "Iltimos, familiyangizni kiriting!",
+    "bdate": "Iltimos, familiyangizni kiriting!",
+    "pnumber": "Iltimos, telefon raqamingizni kiriting!",
+    "password": "Iltimos, parolingizni kiriting!",
+    "conf-password": "Iltimos, parolni takrorlang!",
+    "match-password": "Parollar mos kelmayapti!"
+  }
 }
