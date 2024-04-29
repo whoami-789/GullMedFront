@@ -20,8 +20,7 @@
     "button": "Yozilish",
     "cancel": "Bekor qilish",
     "modal_title": "Sana va vaqtni tanlang",
-    "date": "Sanani tanlang",
-    "time": "Vaqtni tanlang"
+    "date-time": "Sanani va vaqtni tanlang"
   },
   "Results": {
     "patientInfo": "Bemor",
@@ -32,7 +31,9 @@
     "title": "Tugallangan protseduralar",
     "date": "Sana",
     "time": "Vaqt",
-    "open": "Batafsil..."
+    "open": "Batafsil...",
+    "close": "Yopish",
+    "download": "Yuklab olish"
   },
   "Login": {
     "h1": "Kirish",

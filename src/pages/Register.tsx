@@ -17,7 +17,7 @@ const Register: React.FC = () => {
         <div>
             <Header/>
             <div className="container mx-auto py-8 register-content" style={{width: 400}}>
-                <h2 className="text-xl">{t('Register.h1')}</h2>
+                <h2 className="text-xl mb-4">{t('Register.h1')}</h2>
                 <Form
                     name="register_form"
                     onFinish={onFinish}

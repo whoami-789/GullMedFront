@@ -5,15 +5,12 @@ import {useTranslation} from "react-i18next";
 
 const SchedulePopup: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [selectedDate, setSelectedDate] = useState<Moment | null>(null);
-    const [selectedTime, setSelectedTime] = useState<Moment | null>(null);
+    const [selectedDateTime, setSelectedDateTime] = useState<Moment | null>(null);
 
     const handleOk = () => {
-        if (selectedDate && selectedTime) {
-            const formattedDate = selectedDate.format("DD.MM.YYYY");
-            const formattedTime = selectedTime.format("HH:mm");
-            console.log("Выбранная дата:", formattedDate);
-            console.log("Выбранное время:", formattedTime);
+        if (selectedDateTime) {
+            const formattedDateTime = selectedDateTime.format("DD.MM.YYYY HH:mm");
+            console.log("Выбранная дата:", formattedDateTime);
         }
         setIsVisible(false);
     };
@@ -44,22 +41,14 @@ const SchedulePopup: React.FC = () => {
                     <div style={{marginBottom: 20}}>
                         <DatePicker
                             className="w-full"
-                            onChange={(date) => setSelectedDate(date ? moment(date.valueOf()) : null)} // Преобразуем в Moment
-                            format="DD.MM.YYYY"
-                            placeholder={t('Procedures.date')}
+                            showTime
+                            onChange={(date) => setSelectedDateTime(date ? moment(date.valueOf()) : null)} // Преобразуем в Moment
+                            format="DD.MM.YYYY HH:mm"
+                            placeholder={t('Procedures.date-time')}
                             inputReadOnly={true} // Блокирует ввод с клавиатуры
-                        />
-                    </div>
-                    <div>
-                        <TimePicker
-                            className="w-full ant-btn-default"
-                            onChange={(time) => setSelectedTime(time ? moment(time.valueOf()) : null)} // Преобразуем в Moment
-                            format="HH:mm"
+                            needConfirm={false}
                             minuteStep={30}
                             showNow={false}
-                            placeholder={t('Procedures.time')}
-                            needConfirm={false}
-                            inputReadOnly={true} // Блокирует ввод с клавиатуры
                         />
                     </div>
                 </div>
