@@ -9,6 +9,7 @@ import AdminDashboard from "./pages/staff/AdminDashboard";
 import DoctorDashboard from "./pages/staff/DoctorDashboard";
 import RootDashboard from "./pages/staff/RootDashboard";
 import Procedures from "./pages/Procedures";
+import RootRoles from "./pages/staff/RootRoles";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/admin" element={<AdminDashboard/>} />
             <Route path="/doctor" element={<DoctorDashboard/>} />
             <Route path="/root" element={<RootDashboard/>} />
+            <Route path="/root/users" element={<RootRoles/>} />
         </Routes>
     </BrowserRouter>
   );

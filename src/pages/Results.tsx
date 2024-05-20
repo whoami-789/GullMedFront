@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Modal, Card, Button} from 'antd';
+import {Modal, Card, Button, Descriptions} from 'antd';
 import {useTranslation} from "react-i18next";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -70,10 +70,12 @@ const Results: React.FC = () => {
         setModalVisible(false);
     };
 
+    // Base64 закодированный DejaVuSans шрифт
+    const dejavuSansBase64 = 'data:font/truetype;base64,<your-base64-encoded-font>';
+
     // Функция для скачивания результатов в PDF формате
     const handleDownloadPDF = () => {
-        // Код для скачивания PDF файла
-        console.log('Downloading PDF...');
+        
     };
 
     return (
@@ -131,11 +133,11 @@ const Results: React.FC = () => {
                 ]}
             >
                 {selectedProcedure && (
-                    <div>
-                        <a><b>{t('Results.date')}</b>: {selectedProcedure.date}</a><br/>
-                        <a><b>{t('Results.time')}</b>: {selectedProcedure.time}</a><br/>
-                        <a><b>{t('Results.conclusion')}</b>: {selectedProcedure.conclusion}</a>
-                    </div>
+                    <Descriptions bordered column={1}>
+                        <Descriptions.Item label={t('Results.date')}>{selectedProcedure.date}</Descriptions.Item>
+                        <Descriptions.Item label={t('Results.time')}>{selectedProcedure.time}</Descriptions.Item>
+                        <Descriptions.Item label={t('Results.conclusion')}>{selectedProcedure.conclusion}</Descriptions.Item>
+                    </Descriptions>
                 )}
             </Modal>
         </div>
